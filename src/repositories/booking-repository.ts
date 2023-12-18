@@ -36,8 +36,8 @@ async function findBookingsByRoomId(roomId: number) {
       id: true,
       roomId: true,
       userId: true,
-    }
-  })
+    },
+  });
 }
 
 export const bookingRepository = {

@@ -56,7 +56,7 @@ async function changeBookingRoomById(userId: number, roomId: number) {
 async function getBookingByRoomId(roomId: number) {
   const room = await roomRepository.findById(roomId);
   if (!room) throw notFoundError();
-  
+
   const bookings = await bookingRepository.findBookingsByRoomId(roomId);
   return bookings;
 }
